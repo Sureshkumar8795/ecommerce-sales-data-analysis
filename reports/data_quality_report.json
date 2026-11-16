@@ -1,0 +1,61 @@
+{
+  "synthetic_data": true,
+  "seed": 20261117,
+  "input_rows": 13665,
+  "missing_values_before_cleaning": {
+    "Order ID": 0,
+    "Order Date": 0,
+    "Customer ID": 0,
+    "Customer Name": 20,
+    "Product ID": 0,
+    "Product Category": 25,
+    "Product Name": 20,
+    "Quantity": 0,
+    "Unit Price": 0,
+    "Total Sales": 18,
+    "Discount": 0,
+    "Profit": 18,
+    "Region": 30,
+    "Payment Method": 20,
+    "Order Status": 0
+  },
+  "duplicate_rows_removed": 72,
+  "invalid_date_rows_removed": 8,
+  "cleaned_rows": 13585,
+  "missing_values_after_cleaning": {
+    "Order ID": 0,
+    "Order Date": 0,
+    "Customer ID": 0,
+    "Customer Name": 0,
+    "Product ID": 0,
+    "Product Category": 0,
+    "Product Name": 0,
+    "Quantity": 0,
+    "Unit Price": 0,
+    "Total Sales": 0,
+    "Discount": 0,
+    "Profit": 0,
+    "Region": 0,
+    "Payment Method": 0,
+    "Order Status": 0
+  },
+  "missing_sales_values_recalculated": 18,
+  "sales_calculation_mismatches_recalculated": 0,
+  "missing_profit_values_recalculated": 18,
+  "profit_calculation_mismatches_recalculated": 0,
+  "sales_outlier_method": "1.5 x IQR upper fence; flagged, not removed",
+  "sales_outlier_upper_fence": 290.88,
+  "sales_outlier_rows": 914,
+  "calculation_rules": {
+    "total_sales": "round(quantity * unit_price * (1 - discount), 2)",
+    "profit": "round(total_sales - gross_sales * (1 - category_margin), 2)",
+    "analysis_status_scope": "Delivered only"
+  },
+  "margin_assumptions": {
+    "Electronics": 0.24,
+    "Home & Kitchen": 0.32,
+    "Clothing": 0.48,
+    "Beauty": 0.55,
+    "Sports": 0.38
+  }
+}
